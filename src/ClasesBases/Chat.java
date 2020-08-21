@@ -9,41 +9,53 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ivanm
+ * @author ivanm, David morales Norato
  */
 public class Chat {
-    int idUsuario1;
-    int idUsuario2;
-    ArrayList<String> mensajes = new ArrayList<>();
+    private Usuario usuarioLogueado;
+    private Usuario usuarioAmigo;
+    private ArrayList<String> mensajes = new ArrayList<>();
 
-    public Chat(int idUsuario1, int idUsuario2) {
-        this.idUsuario1 = idUsuario1;
-        this.idUsuario2 = idUsuario2;
+    public Chat(Usuario usuarioLogueado, Usuario usuarioAmigo) {
+        this.usuarioLogueado = usuarioLogueado;
+        this.usuarioAmigo = usuarioAmigo;
     }
 
-    public int getIdUsuario1() {
-        return idUsuario1;
+    public Usuario getUsuarioLogueado() {
+        return this.usuarioLogueado;
     }
 
-    public void setIdUsuario1(int idUsuario1) {
-        this.idUsuario1 = idUsuario1;
+    public void setUsuarioLogueado(Usuario usuarioLogueado) {
+        this.usuarioLogueado = usuarioLogueado;
     }
 
-    public int getIdUsuario2() {
-        return idUsuario2;
+    public Usuario getUsuarioAmigo() {
+        return this.usuarioAmigo;
     }
 
-    public void setIdUsuario2(int idUsuario2) {
-        this.idUsuario2 = idUsuario2;
+    public void setUsuarioAmigo(Usuario usuarioAmigo) {
+        this.usuarioAmigo = usuarioAmigo;
     }
 
     public ArrayList<String> getMensajes() {
         return mensajes;
     }
 
+    public String getMensaje(int idMensaje){
+        return this.mensajes.get(idMensaje);
+    }
+    
     public void setMensajes(ArrayList<String> mensajes) {
         this.mensajes = mensajes;
     } 
-
+    
+    public void añadirMensaje(String mensaje){
+        this.mensajes.add(mensaje);
+    }
+    
+    public boolean eliminarMensaje(int idMensaje){
+        this.mensajes.remove(idMensaje);
+        return true;
+    }
 }
 

@@ -11,7 +11,6 @@ import ClasesBases.Usuario;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 /**
  *
  * @author ivanm

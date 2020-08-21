@@ -15,11 +15,11 @@ public class Denuncia {
     int idUsuarioDemandado;
     String descripcion;
 
-    public Denuncia(int idDenuncia, int idUsuarioDemandante, int idUsuarioDemandado, String descripcion) {
-        this.idDenuncia = idDenuncia;
-        this.idUsuarioDemandante = idUsuarioDemandante;
-        this.idUsuarioDemandado = idUsuarioDemandado;
-        this.descripcion = descripcion;
+    public Denuncia(int idUsuarioDemandante, int idUsuarioDemandado, String descripcion) {
+            this.idDenuncia = idDenuncia;
+            this.idUsuarioDemandante = idUsuarioDemandante;
+            this.idUsuarioDemandado = idUsuarioDemandado;
+            this.descripcion = descripcion;
     }
 
     public int getIdDenuncia() {
@@ -54,5 +54,11 @@ public class Denuncia {
         this.descripcion = descripcion;
     }
     
-    
+    public boolean enviarDenunciaBD(){
+        boolean enviado = true;
+        /*
+        FALTA PROGRAMAR ENVÍO DE DENUNCIA A BD
+        */
+        return enviado;
+    }
 }

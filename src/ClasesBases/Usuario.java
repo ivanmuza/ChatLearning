@@ -75,12 +75,18 @@ public class Usuario {
     public void setPuntajes(ArrayList<Puntaje> puntajes) {
         this.puntajes = puntajes;
     }
-
+    
+    public void añadirPuntaje(Puntaje puntaje){
+        this.puntajes.add(puntaje);
+    }
+    
     @Override
     public String toString() {
-        return "Usuario{" + "idUsuario=" + idUsuario + ", nombre=" + nombre + '}';
+        return "##########\n" + 
+                "ID usuario: " + String.valueOf(this.idUsuario) + "\n" +
+                "Nombre: " + this.nombre + "\n" +
+                "Idioma preferido: " + String.valueOf(this.idIdiomaPreferido) + "\n" +
+                "Idioma materno: " + String.valueOf(this.idIdiomaMaterno) + "\n" +
+                "Intereses: " + String.valueOf(this.idInteres) + "\n";
     }
-
-    
-    
 }
